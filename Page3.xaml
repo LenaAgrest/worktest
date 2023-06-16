@@ -1,0 +1,69 @@
+﻿<Page x:Class="test_kadri.Page3"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:test_kadri"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Page2">
+    <Page.Resources>
+        <Style x:Key="{x:Type RadioButton}" TargetType="{x:Type RadioButton}">
+
+        </Style>
+    </Page.Resources>
+    <Grid x:Name="kk">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70*"/>
+            <RowDefinition Height="333*"/>
+            <RowDefinition Height="47*"/>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="/пустой фон город.png"/>
+        </Grid.Background>
+        <Label Content="WORKTEST" FontFamily="Century Gothic" FontSize="48" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Foreground="White" Margin="0,0,0,3" Width="246"/>
+        <Border BorderThickness="5" CornerRadius="20" Background="White" Grid.Row="1">
+            <Grid HorizontalAlignment="Center" Margin="0,9,5,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="398*" MinWidth="398"/>
+                    <ColumnDefinition Width="398*" MinWidth="398" />
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="1" HorizontalAlignment="Left" Margin="5,0,0,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="395*"/>
+                        <RowDefinition Height="55px"/>
+                    </Grid.RowDefinitions>
+                    <RadioButton x:Name="odin" HorizontalAlignment="Left" Margin="0,5,0,0" Foreground="#FF007130" VerticalAlignment="Center" FontFamily="Century Gothic" FontSize="16" Template="{DynamicResource RadioButtonTemplate1}" ContentStringFormat="Multiline" Grid.Row="0">
+                        <RadioButton.Content>
+                            <TextBox Name="otv1" TextWrapping="Wrap" Text="Ответ 1" Background="{x:Null}" Foreground="#FF007130" IsReadOnly="True" BorderBrush="{x:Null}" UndoLimit="170" SelectionBrush="{x:Null}" BorderThickness="0,0,0,0" />
+                        </RadioButton.Content>
+                    </RadioButton>
+                    <RadioButton x:Name="dva" FontFamily="Century Gothic" FontSize="16" Foreground="#FF007130"  Template="{DynamicResource RadioButtonTemplate1}" ContentStringFormat="Multiline" Grid.Row="1">
+                        <RadioButton.Content>
+                            <TextBox Name="otv2" TextWrapping="Wrap" Text="Ответ 2" Background="{x:Null}" Foreground="#FF007130" IsReadOnly="True" BorderBrush="{x:Null}" UndoLimit="170" SelectionBrush="{x:Null}" BorderThickness="0,0,0,0" />
+                        </RadioButton.Content>
+                    </RadioButton>
+                    <RadioButton x:Name="tri" FontFamily="Century Gothic" FontSize="16" Foreground="#FF007130" Template="{DynamicResource RadioButtonTemplate1}" Grid.Row="2">
+                        <RadioButton.Content>
+                            <TextBox Name="otv3" TextWrapping="Wrap" Text="Ответ 3" Background="{x:Null}" Foreground="#FF007130" IsReadOnly="True" BorderBrush="{x:Null}" UndoLimit="170" SelectionBrush="{x:Null}" BorderThickness="0,0,0,0" />
+                        </RadioButton.Content>
+                    </RadioButton>
+                    <Button x:Name="start" Content="Далее" FontFamily="Century Gothic" FontSize="20" Foreground="White" Background="#FF009640" BorderBrush="#FF008539" HorizontalContentAlignment="Center" Click="start_Click" VerticalAlignment="Center" HorizontalAlignment="Center" Width="103" Grid.Row="5" Style="{DynamicResource ButtonStyle1}" />
+                </Grid>
+                <Grid Grid.Column="0" HorizontalAlignment="Stretch" Margin="0,0,5,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="395*"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock x:Name="vopros" Margin="10,4,10,0" TextWrapping="Wrap" Text="Вопрос" TextAlignment="Justify" VerticalAlignment="Top" FontSize="16" Foreground="#FF009640" FontFamily="Century Gothic" Background="Transparent" Width="NaN" Grid.Row="1"/>
+                    <TextBlock x:Name="name" Text="Название" VerticalAlignment="Center" TextAlignment="Center" Margin="10,5,0,0" FontFamily="Century Gothic" FontSize="16" TextWrapping="Wrap" HorizontalAlignment="Center" Foreground="#FF007130" />
+                </Grid>
+            </Grid>
+        </Border>
+        <Label Content="МКУ &quot;ЦМТОД ОМС&quot; Алексеевского городского округа" VerticalAlignment="Bottom" FontFamily="Century Gothic" FontSize="22" HorizontalAlignment="Center" Foreground="White" Margin="0,0,0,10" HorizontalContentAlignment="Center" Grid.Row="2"/>
+        <Image HorizontalAlignment="Left" Height="70" VerticalAlignment="Center" Width="55" Source="/Без имени-1.png"/>
+    </Grid>
+</Page>
